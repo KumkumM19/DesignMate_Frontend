@@ -86,7 +86,7 @@ project-root/
 
 ```bash
 git clone https://github.com/KumkumM19/DesignMate_Frontend.git
-cd fabric-design-tool
+cd DesignMate_Frontend
 ```
 
 ### 2. Install Node Modules
