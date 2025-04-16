@@ -85,7 +85,7 @@ project-root/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/fabric-design-tool.git
+git clone https://github.com/KumkumM19/DesignMate_Frontend.git
 cd fabric-design-tool
 ```
 
