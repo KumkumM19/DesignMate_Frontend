@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canva Designing Interface</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <button id="toggleShapes">Shapes</button>
+        <button id="toggleColor">Color</button>
+        <button id="toggleText">Text</button>
+        <button id="borderButton">Border</button>
+        <button id="uploadImage">Upload Image</button>
+        <!-- <button id="clipImage">Clip Image</button> -->
+        <button id="deleteBtn">Delete</button>
+        <button id="flip">Flip</button>
+        <div id="flipOptions">
+            <button id="flipVertical">Flip Vertical</button>
+            <button id="flipHorizontal">Flip Horizontal</button>
+        </div>
+        <button id="groupBtn">Group</button>
+        <button id="ungroupBtn">Ungroup</button>
+        <button id="align">Alignment</button>
+        <button id="dropShadow">Drop Shadow</button>
+        <button id="exportCanvas">Export JSON</button>
+        <button id="importCanvas">Import JSON</button>
+        <input type="file" id="fileInput" style="display: none;">
+        <button id="downloadImage">Download</button>
+    </div>
+
+    <!-- Sidebars (Panels) -->
+    <div class="sidebar" id="shapePanel">
+        <h3>Select Shape</h3>
+        <div id="shapeContainer"></div>
+    </div>
+
+    <div id="colorPanel" class="sidebar">
+        <label><input type="radio" id="solidFillRadio" name="fillType" checked> Solid Fill</label>
+        <label><input type="radio" id="gradientFillRadio" name="fillType"> Gradient Fill</label>
+        <div id="solidColorSection">
+            <label>Solid Color:</label>
+            <input type="color" id="colorPicker">
+        </div>
+        <div id="gradientColorSection" style="display: none;">
+            <label>Gradient Start Color:</label>
+            <input type="color" id="gradientColorPicker1">
+            <label>Gradient End Color:</label>
+            <input type="color" id="gradientColorPicker2">
+        </div>
+    </div>
+
+    <div id="textPanel" class="sidebar">
+        <button id="addText">Add Text</button>
+    </div>
+
+    <div id="borderPanel" class="sidebar">
+        <h3>Border Settings</h3>
+        <label>Border Color:</label>
+        <input type="color" id="borderColorPicker">
+        <label>Border Style:</label>
+        <select id="borderStyle">
+            <option value="none">None</option>
+            <option value="solid">Solid</option>
+            <option value="dashed">Dashed</option>
+            <option value="dotted">Dotted</option>
+        </select>
+        <label>Border Thickness:</label>
+        <input type="range" id="borderThickness" min="0" max="80" value="1">
+    </div>
+
+    <div id="imageUploadPanel" class="sidebar">
+        <h3>Upload Image</h3>
+        <input type="file" id="imageInput" multiple accept="image/*">
+        <input type="text" id="imageURL" placeholder="Enter Image URL">
+        <button id="addImageFromURL">Add from URL</button>
+    </div>
+
+    <div id="alignmentPanel" class="sidebar">
+        <h3>Align to Page</h3>
+        <button id="alignLeft">Left</button>
+        <button id="alignCenterX">Center</button>
+        <button id="alignRight">Right</button>
+        <button id="alignTop">Top</button>
+        <button id="alignCenterY">Middle</button>
+        <button id="alignBottom">Bottom</button>
+        <h3>Space Distribution</h3>
+        <button id="distributeHorizontal">Distribute Horizontally</button>
+        <button id="distributeVertical">Distribute Vertically</button>
+    </div>
+
+    <div id="dropShadowPanel" class="sidebar">
+        <h3>Drop Shadow Settings</h3>
+        <label>Shadow Color:</label>
+        <input type="color" id="shadowColor">
+        <label>Shadow Offset X:</label>
+        <input type="number" id="shadowOffsetX">
+        <label>Shadow Offset Y:</label>
+        <input type="number" id="shadowOffsetY">
+        <label>Shadow Blur:</label>
+        <input type="number" id="shadowBlur">
+    </div>
+
+    <!-- Canvas Area -->
+    <div class="canvas-container">
+        <canvas id="fabricCanvas"></canvas>
+    </div>
+
+    <!-- Fabric.js and Modules -->
+    <script src="https://cdn.jsdelivr.net/npm/fabric@6.6.1/dist/index.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
