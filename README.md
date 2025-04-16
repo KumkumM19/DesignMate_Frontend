@@ -48,9 +48,7 @@ A powerful, modular, **frontend-only design interface** built with [Fabric.js](h
 | `align.js`        | Aligns and distributes selected objects horizontally or vertically              |
 | `snap.js`         | Snaps objects to center lines or nearby objects + shows guidelines              |
 | `delete.js`       | Deletes selected objects (single/group/selection) on button click               |
----
 
-**## 📁 File Descriptions**
 
 project-root/
 ├── assets/              # Shape SVGs & images
